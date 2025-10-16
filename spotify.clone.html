@@ -1,0 +1,1921 @@
+<!DOCTYPE html>
+
+<head>
+    <title>spotify</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="styles/sidebar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+        integrity="sha512-YZl0NwJ6k38ZtBkZ+Ky5xdYJ3f9NqFTDIF7HjsiPz7eOj6X+HlvPQaYYIu5v9vU3clBgCw3B2V6Dx3bq5pP3Ow=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+
+
+
+
+    <style>
+        body {
+            background-color: black;
+            height: 2000px;
+            position: relative;
+            padding-left: 125px;
+
+
+        }
+
+        .bod {
+            margin-top: 16px;
+        }
+
+        .header {
+            display: flex;
+            flex-direction: row;
+            margin-left: -130px;
+            justify-content: space-between;
+            height: 80px;
+        }
+
+        .hea1 {
+            background-color: black;
+            width: 170px;
+        }
+
+        .threed {
+            color: white;
+            margin-left: 30px;
+        }
+
+        .ang1 {
+            margin-left: 30px;
+            font-size: 35px;
+            color: rgba(161, 161, 161, 0.233);
+            transition: 0.15s;
+
+
+        }
+
+        .ang1:hover {
+            color: whitesmoke;
+            transition: 0.15s;
+
+        }
+
+
+        .ang2 {
+            margin-left: 10px;
+            font-size: 35px;
+            color: rgba(161, 161, 161, 0.233);
+        }
+
+        .ang2:hover {
+            color: whitesmoke;
+            transition: 0.15s;
+        }
+
+
+        .hea2 {
+            display: flex;
+            flex-direction: row;
+
+
+            width: 750px;
+            margin-left: 120px;
+
+
+        }
+
+
+        .ho {
+            background-color: rgb(29, 29, 29);
+
+
+            height: 53px;
+            width: 54px;
+            border-radius: 29px;
+            margin-left: 110px;
+            margin-top: 6px;
+        }
+
+        .fas {
+            font-size: 27px;
+            margin-left: 12px;
+            margin-top: 10px;
+            color: aliceblue;
+
+        }
+
+        .searchbar.search {
+            color: black;
+        }
+
+        .searchbar {
+            display: flex;
+            flex-direction: row;
+        }
+
+        .sear {
+
+            height: 42px;
+            background-color: rgb(29, 29, 29);
+
+            width: 40px;
+            border-right: none;
+            border-top-left-radius: 20px;
+            border-bottom-left-radius: 20px;
+
+
+        }
+
+
+
+        .searchbar .fas {
+
+            font-size: 22px;
+            margin-top: 10px;
+            color: white;
+            margin-left: 1px;
+
+
+        }
+
+
+        .search::placeholder {
+            font-size: 14px;
+            color: rgb(165, 161, 161);
+        }
+
+        .searchbar {
+
+            background-color: rgba(29, 29, 29, 0);
+
+            margin-left: 10px;
+            margin-top: 10px;
+            border: none;
+
+
+
+
+        }
+
+        .search {
+            height: 40px;
+            width: 500px;
+            border-top-right-radius: 20px;
+            border-bottom-right-radius: 20px;
+            border-left: none;
+            background-color: rgb(29, 29, 29);
+            border-color: rgb(29, 29, 29);
+            color: white;
+            border: none;
+            border-bottom: rgb(29, 29, 29);
+
+
+
+
+        }
+
+
+
+
+
+        .hea3 {
+
+
+            width: 570px;
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+
+        }
+
+        .exbut {
+            margin-top: 10px;
+            margin-left: 2px;
+        }
+
+
+
+
+        .pbut {
+            font-size: 17px;
+            font-weight: bolder;
+            font-family: nunito, arial;
+            height: 38px;
+            width: 180px;
+            border-radius: 20px;
+            padding-left: 20px;
+            padding-right: 20px;
+            border: 2px solid white;
+            transition: 0.15s;
+            position: relative;
+
+        }
+
+        .pbut:hover {
+            border: 2px solid white;
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2)
+        }
+
+
+        .pbut .tooltip {
+            position: absolute;
+            background-color: rgb(49, 49, 49);
+            border: 2px solid white;
+            color: white;
+            font-family: nunito, arial;
+            font-size: 15px;
+            font-weight: bold;
+            height: 31px;
+            width: 170px;
+            padding-top: 6px;
+            top: 43px;
+            left: 100px;
+            opacity: 0;
+            transition: 0.70s;
+
+        }
+
+        .pbut:hover .tooltip {
+            opacity: 1;
+        }
+
+
+
+
+
+
+
+        .bell {
+            margin-top: 18px;
+            font-size: 25px;
+            color: white;
+            margin-left: 20px;
+            position: relative;
+        }
+
+        .bell:hover {
+
+
+            transform: scale(1.05);
+
+
+        }
+
+        .bell .tooltip {
+            position: absolute;
+            font-size: 13px;
+            font-weight: bold;
+            color: white;
+            height: 24px;
+            width: 80px;
+            padding-top: 4px;
+            padding-left: 8px;
+            font-family: nunito, arial;
+            background-color: rgb(83, 82, 82);
+            border: 2px solid white;
+            top: 35px;
+            left: -25px;
+            opacity: 0;
+            transition: 0.17s;
+        }
+
+        .bell:hover .tooltip {
+            opacity: 1;
+        }
+
+
+        .friend {
+            margin-top: 18px;
+            font-size: 23px;
+            color: white;
+            margin-left: 20px;
+            position: relative;
+
+
+        }
+
+        .friend :hover {
+
+            transform: scale(1.05);
+
+        }
+
+        .friend .tooltip {
+            position: absolute;
+            font-size: 15px;
+            font-weight: bold;
+            color: white;
+            height: 30px;
+            width: 148px;
+            padding-top: 4px;
+            padding-left: 8px;
+            font-family: nunito, arial;
+            background-color: rgb(83, 82, 82);
+            border: 2px solid white;
+            top: 35px;
+            left: -60px;
+            opacity: 0;
+            transition: 0.17s;
+            padding-top: 6px;
+            padding-left: 10px;
+
+        }
+
+
+        .friend:hover .tooltip {
+            opacity: 1;
+        }
+
+
+
+        .sbutt {
+            margin-top: 10px;
+            margin-left: - 5px;
+        }
+
+        .sbutton {
+
+            height: 40px;
+            width: 40px;
+            border-radius: 20px;
+            font-size: 22px;
+            font-family: nunito, arial;
+            font-weight: bold;
+            margin-left: 20px;
+            position: relative;
+            border-color: aqua;
+            border: 4px solid aqua;
+        }
+
+        .sbutton:hover {
+            transform: scale(1.05);
+
+        }
+
+        .sbutton .tooltip {
+            position: absolute;
+            background-color: rgb(83, 83, 83);
+            border: 2px solid white;
+            color: white;
+            font-family: nunito, arial;
+            font-size: 15px;
+            font-weight: bold;
+            height: 28px;
+            width: 110px;
+            padding-top: 6px;
+            top: 43px;
+            left: -32px;
+            opacity: 0;
+            transition: 0.17s;
+
+        }
+
+        .sbutton:hover .tooltip {
+            opacity: 1;
+
+        }
+
+        .mmm {
+            display: flex;
+            flex-direction: row;
+            margin-left: -25px;
+        }
+
+        .min {
+            color: white;
+            background-color: rgba(247, 0, 0, 0);
+            margin-left: 23px;
+            height: 40px;
+            width: 50px;
+            margin-top: 12px;
+        }
+
+        .min:hover {
+            background-color: rgb(83, 83, 83);
+        }
+
+
+        .min .fa-solid {
+            color: white;
+            font-size: 23px;
+            margin-top: 1px;
+            margin-left: 13px;
+        }
+
+        .min .fa-regular {
+            color: white;
+            font-size: 23px;
+            margin-top: 10px;
+            margin-left: 14px;
+        }
+
+        .minn .fa-solid {
+            color: white;
+            font-size: 31px;
+            margin-top: 6px;
+            margin-left: 13px;
+        }
+
+
+        .minn {
+            background-color: rgba(247, 0, 0, 0);
+            margin-left: 25px;
+            height: 40px;
+            width: 50px;
+            margin-top: 12px;
+        }
+
+        .minn:hover {
+            background-color: rgb(83, 83, 83);
+        }
+
+
+
+
+
+
+
+
+        .spoc1 {
+            display: grid;
+            grid-template-columns: 360px 360px 360px 360px;
+            row-gap: 20px;
+            width: 1440px;
+            margin-top: 20px;
+
+        }
+
+
+
+        .spob1 {
+
+            display: flex;
+            flex-direction: row;
+            height: 70px;
+            width: 330px;
+            border-radius: 10px;
+            border: 1px solid rgba(224, 224, 224, 0);
+            background-color: rgb(42, 45, 58);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.09);
+            position: relative;
+
+
+        }
+
+        .spob1 .fa-solid {
+            position: absolute;
+            font-size: 49px;
+            margin-top: 11px;
+            margin-left: 270px;
+            opacity: 0;
+            transition: 0.25s;
+        }
+
+        .spob1:hover .fa-solid {
+            opacity: 1;
+            transform: scale(1.05);
+
+
+        }
+
+        .spoimg {
+            height: 70px;
+            border-top-left-radius: 10px;
+            border-bottom-left-radius: 10px;
+
+        }
+
+        .artname {
+            margin-top: 12px;
+            margin-left: 20px;
+        }
+
+        p {
+            font-family: nunito, Arial;
+            color: white;
+            font-size: 17px;
+            font-weight: bolder;
+
+
+        }
+
+        .leftsection {
+            border: 2px solid rgba(127, 255, 212, 0);
+            background-color: rgb(15, 15, 15);
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 2000px;
+            bottom: 800px;
+            border-radius: 8px;
+            margin-top: 96px;
+        }
+
+        .lil {
+            font-size: 25px;
+            border: 4px solid aquamarine;
+            height: 34px;
+            width: 34px;
+            border-radius: 20px;
+            margin-left: 28px;
+            margin-top: 10px;
+
+
+        }
+
+        i {
+            margin-left: 6px;
+
+        }
+
+
+
+        .dlib {
+
+
+            border: 2px solid rgba(250, 128, 114, 0);
+            padding-top: 15px;
+            padding-bottom: 8px;
+            padding-left: -2px;
+            width: 90px;
+            margin-left: 3px;
+
+
+
+
+
+        }
+
+        .dlib:hover {
+            background-color: rgb(42, 45, 58);
+            border-radius: 8px;
+
+        }
+
+
+
+
+
+        .font {
+            font-family: nunito, arial;
+
+            font-size: 16px;
+            color: rgb(189, 185, 185);
+        }
+
+
+        .library {
+
+
+            height: 60px;
+            margin-top: -1px;
+            margin-left: 15px;
+            border-radius: 8px;
+            background-color: aqua;
+
+
+        }
+
+
+
+
+
+        .like {
+            height: 60px;
+            margin-left: 16px;
+            border-radius: 8px;
+            margin-top: 14px;
+            position: relative;
+
+        }
+
+
+
+        .dlike {
+            border: 2px solid rgba(127, 255, 212, 0);
+            margin-top: 2px;
+            padding-bottom: 8px;
+            width: 90px;
+            margin-left: 3px;
+            border-radius: 8px;
+            position: relative;
+            overflow: visible;
+        }
+
+        .dlike:hover {
+            background-color: rgb(42, 45, 58);
+        }
+
+        .dlike .tooltip {
+            position: absolute;
+            background-color: rgb(36, 35, 35);
+            color: rgb(247, 247, 250);
+            right: -170px;
+            top: 19px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            padding-right: 10px;
+            padding-left: 10px;
+            font-family: nunito, Arial;
+            border-radius: 4px;
+            opacity: 0;
+            transition: opacity 0.25s;
+            pointer-events: none;
+            z-index: 9999;
+
+
+        }
+
+        .to {
+            font-size: 19px;
+            font-weight: 600;
+
+        }
+
+        .to1 {
+            font-size: 16px;
+            color: rgb(204, 202, 202);
+        }
+
+        .to2 {
+            color: rgb(204, 202, 202);
+        }
+
+        .to3 {
+            color: rgb(204, 202, 202);
+        }
+
+        .dlike:hover .tooltip {
+            opacity: 1;
+        }
+
+
+
+
+        .save {
+
+            height: 60px;
+            margin-top: 14px;
+            margin-left: 15px;
+            border-radius: 8px;
+        }
+
+        .dsave {
+            border: 2px solid rgba(127, 255, 212, 0);
+            margin-top: 3px;
+            padding-bottom: 8px;
+            width: 90px;
+            margin-left: 3px;
+            border-radius: 8px;
+        }
+
+        .dsave:hover {
+            background-color: rgb(42, 45, 58);
+        }
+
+        .dsave .tooltip {
+            position: absolute;
+            background-color: rgb(36, 35, 35);
+            color: rgb(247, 247, 250);
+            right: -230px;
+            top: 278px;
+            padding-top: 3px;
+            padding-bottom: 3px;
+            padding-right: 10px;
+            padding-left: 10px;
+            font-family: nunito, Arial;
+            border-radius: 4px;
+            opacity: 0;
+            transition: opacity 0.25s;
+
+
+        }
+
+        .to {
+            font-size: 19px;
+            font-weight: 600;
+
+        }
+
+        .to1 {
+            font-size: 16px;
+            color: rgb(204, 202, 202);
+        }
+
+        .to2 {
+            color: rgb(204, 202, 202);
+        }
+
+        .to3 {
+            color: rgb(204, 202, 202);
+        }
+
+        .dsave:hover .tooltip {
+            opacity: 1;
+        }
+
+
+
+        .at1 {
+            height: 74px;
+            margin-top: 14px;
+            margin-left: 11px;
+            border-radius: 37px;
+            width: 68px;
+        }
+
+        .dat1 {
+            border: 2px solid rgba(0, 255, 255, 0);
+            margin-bottom: 2px;
+            padding-bottom: 6px;
+            margin-top: 2px;
+            width: 90px;
+            margin-left: 3px;
+            border-radius: 8px;
+            position: relative;
+            overflow: visible;
+        }
+
+        .dat1:hover {
+            background-color: rgb(42, 45, 58);
+        }
+
+        .dat1 .tooltip {
+            position: absolute;
+            background-color: rgb(36, 35, 35);
+            color: rgb(247, 247, 250);
+            right: -170px;
+            top: 20px;
+            padding-top: 4px;
+            padding-bottom: 3px;
+            padding-right: 10px;
+            padding-left: 10px;
+            font-family: nunito, Arial;
+            border-radius: 4px;
+            opacity: 0;
+            z-index: 9999;
+            transition: opacity 0.25s;
+
+
+        }
+
+        .to {
+            font-size: 17px;
+            font-weight: 600;
+
+        }
+
+        .to1 {
+            font-size: 16px;
+            color: rgb(204, 202, 202);
+        }
+
+        .dat1:hover .tooltip {
+            opacity: 1;
+        }
+
+        .dat15 {
+            border: 2px solid rgba(0, 255, 255, 0);
+            margin-bottom: 2px;
+            padding-bottom: 6px;
+            margin-top: 2px;
+            width: 90px;
+            margin-left: 3px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .dat15:hover {
+            background-color: rgb(42, 45, 58);
+        }
+
+        .dat15 .tooltip {
+            position: absolute;
+            background-color: rgb(36, 35, 35);
+            color: rgb(247, 247, 250);
+            right: -207px;
+            top: 20px;
+            padding-top: 4px;
+            padding-bottom: 3px;
+            padding-right: 10px;
+            padding-left: 10px;
+            font-family: nunito, Arial;
+            border-radius: 4px;
+            opacity: 0;
+            transition: opacity 0.25s;
+            z-index: 9999;
+        }
+
+        .to {
+            font-size: 17px;
+            font-weight: 600;
+
+        }
+
+        .to1 {
+            font-size: 16px;
+            color: rgb(204, 202, 202);
+        }
+
+        .dat15:hover .tooltip {
+            opacity: 1;
+        }
+
+        .dat15 {
+            border: 2px solid rgba(0, 255, 255, 0);
+            margin-bottom: 2px;
+            padding-bottom: 6px;
+            margin-top: 2px;
+            width: 90px;
+            margin-left: 3px;
+            border-radius: 8px;
+            position: relative;
+
+        }
+
+        .dat15:hover {
+            background-color: rgb(42, 45, 58);
+        }
+
+        .dat16 {
+            border: 2px solid rgba(0, 255, 255, 0);
+            margin-bottom: 2px;
+            padding-bottom: 6px;
+            margin-top: 2px;
+            width: 90px;
+            margin-left: 3px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .dat16:hover {
+            background-color: rgb(42, 45, 58);
+        }
+
+
+        .dat16 .tooltip {
+            position: absolute;
+            background-color: rgb(36, 35, 35);
+            color: rgb(247, 247, 250);
+            right: -129px;
+            top: 20px;
+            padding-top: 4px;
+            padding-bottom: 3px;
+            padding-right: 10px;
+            padding-left: 10px;
+            font-family: nunito, Arial;
+            border-radius: 4px;
+            opacity: 0;
+            z-index: 9999;
+            transition: opacity 0.25s;
+
+
+        }
+
+        .to {
+            font-size: 17px;
+            font-weight: 600;
+
+        }
+
+        .to1 {
+            font-size: 16px;
+            color: rgb(204, 202, 202);
+        }
+
+        .dat16:hover .tooltip {
+            opacity: 1;
+        }
+
+        .at2 {
+
+            height: 70px;
+            margin-top: 15px;
+            margin-left: 10px;
+            border-radius: 12px;
+        }
+
+        .dat21 {
+            border: 2px solid rgba(0, 255, 0, 0);
+            background-color: rgba(127, 255, 212, 0);
+            margin-bottom: 2px;
+            padding-bottom: 6px;
+            width: 90px;
+            margin-left: 3px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .dat21:hover {
+            background-color: rgb(42, 45, 58);
+        }
+
+        .dat21 .tooltip {
+            position: absolute;
+            background-color: rgb(36, 35, 35);
+            color: rgb(247, 247, 250);
+            right: -107px;
+            top: 20px;
+            padding-top: 4px;
+            padding-bottom: 3px;
+            padding-right: 10px;
+            padding-left: 10px;
+            font-family: nunito, Arial;
+            border-radius: 4px;
+            opacity: 0;
+            z-index: 9999;
+            transition: opacity 0.25s;
+
+
+        }
+
+        .to {
+            font-size: 17px;
+            font-weight: 600;
+
+        }
+
+        .to1 {
+            font-size: 16px;
+            color: rgb(204, 202, 202);
+        }
+
+        .dat21:hover .tooltip {
+            opacity: 1;
+        }
+
+        .at2 {
+
+            height: 70px;
+            margin-top: 15px;
+            margin-left: 10px;
+            border-radius: 12px;
+        }
+
+        .dat22 {
+            border: 2px solid rgba(0, 255, 0, 0);
+            background-color: rgba(127, 255, 212, 0);
+            margin-bottom: 2px;
+            padding-bottom: 6px;
+            width: 90px;
+            margin-left: 3px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .dat22:hover {
+            background-color: rgb(42, 45, 58);
+        }
+
+        .dat22 .tooltip {
+            position: absolute;
+            background-color: rgb(36, 35, 35);
+            color: rgb(247, 247, 250);
+            right: -137px;
+            top: 20px;
+            padding-top: 4px;
+            padding-bottom: 3px;
+            padding-right: 10px;
+            padding-left: 10px;
+            font-family: nunito, Arial;
+            border-radius: 4px;
+            opacity: 0;
+            z-index: 9999;
+            transition: opacity 0.25s;
+
+
+        }
+
+        .to {
+            font-size: 17px;
+            font-weight: 600;
+
+        }
+
+        .to1 {
+            font-size: 16px;
+            color: rgb(204, 202, 202);
+        }
+
+        .dat22:hover .tooltip {
+            opacity: 1;
+        }
+
+        .at2 {
+
+            height: 70px;
+            margin-top: 15px;
+            margin-left: 10px;
+            border-radius: 12px;
+        }
+
+        .dat23 {
+            border: 2px solid rgba(0, 255, 0, 0);
+            background-color: rgba(127, 255, 212, 0);
+            margin-bottom: 2px;
+            padding-bottom: 6px;
+            width: 90px;
+            margin-left: 3px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .dat23:hover {
+            background-color: rgb(42, 45, 58);
+        }
+
+        .dat23 .tooltip {
+            position: absolute;
+            background-color: rgb(36, 35, 35);
+            color: rgb(247, 247, 250);
+            right: -212px;
+            top: 20px;
+            padding-top: 4px;
+            padding-bottom: 3px;
+            padding-right: 10px;
+            padding-left: 10px;
+            font-family: nunito, Arial;
+            border-radius: 4px;
+            opacity: 0;
+            z-index: 9999;
+            transition: opacity 0.25s;
+
+
+        }
+
+        .to {
+            font-size: 17px;
+            font-weight: 600;
+
+        }
+
+        .to1 {
+            font-size: 16px;
+            color: rgb(204, 202, 202);
+        }
+
+        .dat23:hover .tooltip {
+            opacity: 1;
+        }
+
+        .at2 {
+
+            height: 70px;
+            margin-top: 15px;
+            margin-left: 10px;
+            border-radius: 12px;
+        }
+
+        .dat24 {
+            border: 2px solid rgba(0, 255, 0, 0);
+            background-color: rgba(127, 255, 212, 0);
+            margin-bottom: 2px;
+            padding-bottom: 6px;
+            width: 90px;
+            margin-left: 3px;
+            border-radius: 8px;
+            position: relative;
+        }
+
+        .dat24:hover {
+            background-color: rgb(42, 45, 58);
+        }
+
+        .dat24 .tooltip {
+            position: absolute;
+            background-color: rgb(36, 35, 35);
+            color: rgb(247, 247, 250);
+            right: -141px;
+            top: 20px;
+            padding-top: 4px;
+            padding-bottom: 3px;
+            padding-right: 10px;
+            padding-left: 10px;
+            font-family: nunito, Arial;
+            border-radius: 4px;
+            opacity: 0;
+            z-index: 9999;
+            transition: opacity 0.25s;
+
+
+        }
+
+        .to {
+            font-size: 17px;
+            font-weight: 600;
+
+        }
+
+        .to1 {
+            font-size: 16px;
+            color: rgb(204, 202, 202);
+        }
+
+        .dat24:hover .tooltip {
+            opacity: 1;
+        }
+
+
+
+
+
+
+
+        .rightsection {
+            background-color: rgb(15, 15, 15);
+            position: absolute;
+            top: 0px;
+            right: 0;
+            left: 1441px;
+            bottom: 800px;
+            border: 2px solid rgba(0, 255, 255, 0);
+            border-radius: 12px;
+            padding-right: 300px;
+            margin-left: 200px;
+            width: 157px;
+            margin-top: 96px;
+        }
+
+        .rightt {
+            margin-left: 12px;
+            margin-top: 2px;
+            font-size: 25px;
+            font-weight: bolder;
+        }
+
+
+        .ttopic {
+            display: block;
+            margin-top: 40px;
+            width: 1440px;
+        }
+
+        .topic {
+            font-size: larger;
+        }
+
+        .ttopic2 {
+            display: block;
+            margin-top: 20px;
+            width: 1440px;
+        }
+
+        .topic2 {
+            font-size: larger;
+        }
+
+        .topic3 {
+            font-weight: bolder;
+            font-size: 25px;
+        }
+
+        .ttopic3 {
+            display: block;
+            margin-top: -10px;
+            width: 1440px;
+
+        }
+
+        .spoc2,
+        .spoc3,
+        .spoc4 {
+            display: grid;
+            grid-template-columns: 240px 240px 240px 240px 240px 240px;
+            row-gap: 20px;
+            height: 340px;
+            margin-top: 30px;
+            width: 1440px;
+
+
+        }
+
+
+
+        .spob2 {
+            display: flex;
+            flex-direction: column;
+            height: 310px;
+            border: 2px solid rgba(255, 255, 255, 0);
+            width: 210px;
+
+            border-radius: 12px;
+            position: relative;
+        }
+
+        .spob2:hover {
+            background-color: rgb(42, 45, 58);
+        }
+
+        .spob2 .fa-solid {
+            position: absolute;
+            margin-left: 140px;
+            margin-top: 150px;
+            font-size: 50px;
+            opacity: 0;
+            transition: 0.75S;
+        }
+
+        .spob2:hover .fa-solid {
+            opacity: 1;
+            transform: scale(1.05);
+
+        }
+
+
+        .r1 {
+            height: 190px;
+            width: 180px;
+            margin-top: 18px;
+            margin-left: 15px;
+            border-radius: 12px;
+
+
+        }
+
+        .mov {
+            margin-left: 1px;
+            margin-left: 15px;
+        }
+
+        .art {
+            margin-top: -12px;
+            margin-left: 15px;
+            font-size: 13px;
+            font-weight: 500;
+            color: rgb(209, 201, 201);
+        }
+
+        .art3 {
+            font-size: 13px;
+            font-weight: 500;
+            color: rgb(209, 201, 201);
+            margin-left: 18px;
+
+        }
+
+
+        .r2 {
+            height: 180px;
+            width: 90%;
+
+            margin-top: 18px;
+            margin-left: 0px;
+            border-radius: 50%;
+
+        }
+
+        .artimg {
+            margin-left: 12px;
+        }
+
+        .artrow {
+            margin-left: 10px;
+        }
+
+        .artist {
+            margin-top: -1px;
+            font-size: 15px;
+            font-weight: 500;
+            color: rgb(209, 201, 201);
+            margin-left: 8px;
+        }
+
+        .r3 {
+            height: 450px;
+            width: 420px;
+            border-radius: 12px;
+        }
+
+        .badass {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            width: 400px;
+        }
+
+        .spob4 {
+            margin-left: 12px;
+
+        }
+
+        .songn {
+            margin-left: 12px;
+            margin-top: 10px;
+
+
+            font-size: 25px;
+            font-weight: bolder;
+
+        }
+
+        .songart {
+            font-size: 16px;
+            margin-top: -21px;
+            margin-left: 12px;
+            color: rgb(204, 202, 202);
+            width: 200px;
+
+        }
+
+        .badass .fa-regular {
+            position: relative;
+            font-size: 26px;
+            color: aquamarine;
+            margin-top: 30px;
+            margin-right: -25px;
+
+        }
+
+        .creator {
+            height: 300px;
+            width: 415px;
+            margin-left: 12px;
+            border: 2px solid rgba(127, 255, 212, 0);
+            background-color: rgb(36, 35, 35);
+            border-radius: 14px;
+        }
+
+        .grid1 {
+            display: grid;
+            grid-template-columns: 330px 1fr;
+            margin-left: 12px;
+
+        }
+
+        .type {
+            word-spacing: -1px;
+            font-size: 14px;
+            margin-top: 20px;
+            color: rgb(204, 202, 202);
+        }
+
+        .grid2 {
+            display: grid;
+            grid-template-columns: 230px 1fr;
+            margin-left: 12px;
+        }
+
+        .siart {
+            font-size: 14px;
+            color: rgb(204, 202, 202);
+            margin-top: -12px;
+        }
+
+        .button1 {
+            margin-left: 84px;
+            margin-top: 20px;
+
+        }
+
+        .butt {
+            height: 35px;
+            width: 80px;
+            font-size: 16px;
+            font-family: nunito, Arial;
+            font-weight: bold;
+            border-radius: 40px;
+            background-color: black;
+            color: white;
+            border: 1px solid rgba(255, 255, 255, 0.705);
+            transition: all 0.2s ease;
+        }
+
+        .butt:hover,
+        .butt2:hover {
+            border: 2px solid white;
+            transform: scale(1.05);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .sidebox {
+            height: 150px;
+            border: 2px solid rgba(127, 255, 212, 0);
+            margin-top: 35px;
+            width: 415px;
+            background-color: rgb(36, 35, 35);
+            border-radius: 14px;
+
+        }
+
+        .sibox {
+            margin-left: 12px;
+        }
+
+        .butt2 {
+            height: 35px;
+            width: 220px;
+            border-radius: 30px;
+            background-color: black;
+            color: white;
+            font-size: 15px;
+            font-family: nunito, Arial;
+            font-weight: bold;
+            transition: all 0.2s ease;
+
+
+            border: 1px solid rgba(255, 255, 255, 0.705);
+        }
+
+        .middle-section {
+            border: 2px solid rgba(127, 255, 212, 0);
+            width: 1415px;
+            border-radius: 12px;
+            background-color: rgb(15, 15, 15);
+            padding-left: 40px;
+            padding-right: 40px;
+            padding-top: 30px;
+
+        }
+
+
+        .b1 {
+            background-color: white;
+            height: 36px;
+            width: 60px;
+            border-radius: 18px;
+            cursor: pointer;
+            border-color: white;
+            font-family: nunito, arial;
+            font-size: 17px;
+            color: black;
+            font-weight: 700;
+
+
+        }
+
+        .b1:hover {
+            background-color: rgb(110, 109, 109);
+            border: 2px rgb(110, 109, 109);
+        }
+
+
+
+        .b2 {
+            background-color: rgb(59, 59, 59);
+            height: 36px;
+            width: 70px;
+            border-radius: 18px;
+            cursor: pointer;
+            font-family: nunito, arial;
+            font-size: 17px;
+            font-weight: 700;
+            color: white;
+            border: 2px solid black;
+
+
+
+        }
+
+        .b2:hover {
+            background-color: rgb(110, 109, 109);
+            border: 2px rgb(110, 109, 109);
+        }
+
+        .b11 {
+
+            background-color: rgb(59, 59, 59);
+            height: 36px;
+            width: 90px;
+            border-radius: 18px;
+            cursor: pointer;
+            font-family: nunito, arial;
+            font-size: 17px;
+            font-weight: 700;
+            color: white;
+            border: 2px solid black;
+
+        }
+
+        .b11:hover {
+            background-color: rgb(110, 109, 109);
+            border: 2px rgb(110, 109, 109);
+        }
+    </style>
+
+</head>
+
+<body>
+    <div class="header">
+        <div class="hea1">
+            <span class="threed" style="font-size: 40px;">&#8943;</span>
+            <span class="ang1"><i class=" fa fa-angle-left" aria-hidden="true"></i></span>
+            <span class="ang2"><i class="fa fa-angle-right" aria-hidden="true"></i></span>
+
+        </div>
+
+
+        <div class="hea2">
+            <div class="ho">
+                <span class="home"><i class="fas fa-home"></i></span>
+            </div>
+
+            <div>
+                <button class="searchbar">
+                    <div class="sear"><i class="fas fa-search"></i></div>
+                    <input class="search" type="text" placeholder="What Do You Want to Play">
+
+                </button>
+            </div>
+
+        </div>
+
+
+
+        <div class="hea3">
+            <div class="exbut">
+                <button class="pbut">Explore Premium
+                    <div class="tooltip">
+                        Upgrade To Premium
+                    </div>
+
+                </button>
+
+            </div>
+            <div class="bell">
+                <i class="fa-solid fa-bell">
+                </i>
+                <div class="tooltip">Whats New</div>
+            </div>
+            <div class="friend">
+                <i class="fa-solid fa-user-group"></i>
+                <div class="tooltip">Friends Community</div>
+
+            </div>
+            <div class="sbuttn">
+                <div class="sbutt">
+                    <button class="sbutton">
+                        S
+                        <div class="tooltip">Sriragav007</div>
+                    </button>
+
+                </div>
+            </div>
+
+            <div class="mmm">
+                <div class="min">
+                    <i class="fa-solid fa-window-minimize"></i>
+
+                </div>
+                <div class="min">
+                    <i class="fa-regular fa-square"></i>
+
+                </div>
+                <div class="minn">
+                    <i class="fa-solid fa-xmark"></i>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+    <div class="bod">
+        <div class="rightsection">
+            <p class="rightt">Leo</p>
+            <div class="spob4">
+                <img class="r3" src="pimg.html/spot5.jpg">
+            </div>
+            <div class="badass">
+                <div>
+                    <p class="songn">Badass</p>
+                    <p class="songart">Anirudh Ravichandran</p>
+                </div>
+
+                <i class="fa-regular fa-heart"></i>
+
+
+            </div>
+            <div class="creator">
+                <div class="grid1">
+                    <p>Credits</p>
+                    <p class="type">Show all</p>
+                </div>
+                <div class="grid2">
+                    <div class="sideart">
+                        <p>AnirudhRavichandran</p>
+                        <p class="siart">Main Artist, Composer</p>
+                    </div>
+                    <div class="button1">
+                        <button class="butt">Follow</button>
+                    </div>
+
+                </div>
+
+                <div class="grid2">
+                    <div class="sideart">
+                        <p>Vijay</p>
+                        <p class="siart">Actor</p>
+                    </div>
+                    <div class="button1">
+                        <button class="butt">Follow</button>
+                    </div>
+
+                </div>
+                <div class="grid2">
+                    <div class="sideart">
+                        <p>Vishnu Edavan</p>
+                        <p class="siart">Lyricist</p>
+                    </div>
+                    <div class="button1">
+                        <button class="butt">Follow</button>
+                    </div>
+
+                </div>
+                <div class="sidebox">
+                    <div class="sibox">
+                        <p>Your queue is empty</p>
+                        <div>
+                            <button class="butt2">Search for something new</button>
+                        </div>
+
+                    </div>
+
+
+                </div>
+            </div>
+
+        </div>
+        <div class="leftsection">
+
+            <p class="lil"><i class="fa-solid fa-plus"></i></p>
+            <div class="dlib">
+                <img class="library" src="icons/library.svg">
+            </div>
+            <div class="dlike">
+                <img class="like" src="pimg.html/like.jpg">
+                <div class="tooltip">
+                    <span class="to">Liked Songs</span> <br><span class="to1"> Playlist</span> - <span
+                        class="to2">536</span> <span class="to3">songs</span>
+
+                </div>
+
+            </div>
+            <div class="dsave">
+                <img class="save" src="pimg.html/images.png">
+                <div class="tooltip">
+                    <span class="to">Your Episodes </span> <br><span class="to1"> Saved & downloaded songs</span>
+
+                </div>
+            </div>
+            <div class="dat1">
+                <img class="at1" src="pimg.html/art1.jpg">
+                <div class="tooltip">
+                    <span class="to">Hip Hop Tamizha </span><br><span class="to1">Artist</span>
+
+                </div>
+            </div>
+
+            <div class="dat15">
+                <img class="at1" src="pimg.html/art7.jpg">
+                <div class="tooltip">
+                    <span class="to">Anirudh Ravichandran</span><br><span class="to1">Artist</span>
+                </div>
+            </div>
+
+
+            <div class="dat16">
+                <img class="at1" src="pimg.html/art4.jpg">
+                <div class="tooltip">
+                    <span class="to">A.R.Rahman</span><br><span class="to1">Artist</span>
+                </div>
+
+            </div>
+            <div class="dat21">
+                <img class="at2" src="pimg.html/spoti4.jpg">
+                <div class="tooltip">
+                    <span class="to">Daily Mix</span><br><span class="to1">Playlist</span>
+                </div>
+
+            </div>
+            <div class="dat22">
+                <img class="at2" src="pimg.html/spoti5.jpg">
+                <div class="tooltip">
+                    <span class="to">Made For You</span><br><span class="to1">Playlist</span>
+                </div>
+
+            </div>
+            <div class="dat23">
+                <img class="at2" src="pimg.html/spoti6.jpg">
+                <div class="tooltip">
+                    <span class="to">More Of What You Like</span><br><span class="to1">Playlist</span>
+                </div>
+
+            </div>
+            <div class="dat24">
+                <img class="at2" src="pimg.html/Forever Alone Music Note">
+                <div class="tooltip">
+                    <span class="to">My Playlist #1</span><br><span class="to2">536</span>-<span
+                        class="to3">songs</span>
+                </div>
+
+            </div>
+
+        </div>
+        <div class="middle-section">
+            <button class="b1">All</button>
+            <button class="b2">Music</button>
+            <button class="b11">Podcast</button>
+            <div class="spoc1">
+                <div class="spob1">
+                    <img class="spoimg" src="proimg/santhosh-narayanan-1068255-1663739610.avif">
+                    <p class="artname">Santhosh Narayanan <br>Tamil Hits</p>
+                    <i class="fa-solid fa-circle-play" style="color: #48c007;"></i>
+                </div>
+                <div class="spob1">
+                    <img class="spoimg" src="pimg.html/spo2.jpg">
+                    <p class="artname"> Anirudh Ravichandran <br>Tamil Hits</p>
+                    <i class="fa-solid fa-circle-play" style="color: #48c007;"></i>
+                </div>
+                <div class="spob1">
+                    <img class="spoimg" src="pimg.html/spo3.jpg">
+                    <p class="artname"> This is A R Rahman<br>Tamil Hits</p>
+                    <i class="fa-solid fa-circle-play" style="color: #48c007;"></i>
+                </div>
+                <div class="spob1">
+                    <img class="spoimg" src="pimg.html/spo4.jpg">
+                    <p class="artname">Harris Jayaraj <br>Vibes</p>
+                    <i class="fa-solid fa-circle-play" style="color: #48c007;"></i>
+                </div>
+                <div class="spob1">
+                    <img class="spoimg" src="pimg.html/spo5.jpg">
+                    <p class="artname">The One Song <br>(From "Retro")</p>
+                    <i class="fa-solid fa-circle-play" style="color: #48c007;"></i>
+                </div>
+                <div class="spob1">
+                    <img class="spoimg" src="pimg.html/spo6.jpg">
+                    <p class="artname">Chitiku Vibe <br>(From "Coolie")</p>
+                    <i class="fa-solid fa-circle-play" style="color: #48c007;"></i>
+                </div>
+                <div class="spob1">
+                    <img class="spoimg" src="pimg.html/spo7.jpg">
+                    <p class="artname">Missing Me<br>(From "Mahaan")</p>
+                    <i class="fa-solid fa-circle-play" style="color: #48c007;"></i>
+                </div>
+                <div class="spob1">
+                    <img class="spoimg" src="pimg.html/spo8.jpg">
+                    <p class="artname">Thani Oruvan<br>(From "Thani Oruvan")</p>
+                    <i class="fa-solid fa-circle-play" style="color: #48c007;"></i>
+                </div>
+            </div>
+
+            <div class="ttopic">
+                <p class="topic">More Of What You Like</p>
+            </div>
+            <div class="spoc2">
+
+                <div class="spob2">
+                    <img class="r1" src="pimg.html/spot1.jpg">
+                    <i class="fa-solid fa-circle-play" style="color: #48c007;"></i>
+                    <p class="mov">I (Original Motion<br>Picture Soundtrack)</p>
+                    <p class="art">A.R.Rahman</p>
+
+                </div>
+                <div class="spob2">
+                    <img class="r1" src="pimg.html/spot2.jpg">
+                    <i class="fa-solid fa-circle-play" style="color: #48c007;"></i>
+                    <p class="mov">Vidaamuyarchi (Original Motion Picture Soundtrack)</p>
+                    <p class="art">Anirudh Ravichandran</p>
+                </div>
+                <div class="spob2">
+                    <img class="r1" src="pimg.html/spot3.jpg">
+                    <i class="fa-solid fa-circle-play" style="color: #48c007;"></i>
+                    <p class="mov">Jailer 2 (Original Motion <br>Picture Soundtrack)</p>
+                    <p class="art">Anirudh Ravichandran</p>
+                </div>
+                <div class="spob2">
+                    <img class="r1" src="pimg.html/spot4.jpg">
+                    <i class="fa-solid fa-circle-play" style="color: #48c007;"></i>
+                    <p class="mov">Vikram(Original Motion <br>Picture Soundtrack)</p>
+                    <p class="art">Anirudh Ravichandran</p>
+                </div>
+                <div class="spob2">
+                    <img class="r1" src="pimg.html/spot5.jpg">
+                    <i class="fa-solid fa-circle-play" style="color: #48c007;"></i>
+                    <p class="mov">Leo (Original Motion Picture Soundtrack)</p>
+                    <p class="art">Anirudh Ravichandran</p>
+                </div>
+                <div class="spob2">
+                    <img class="r1" src="pimg.html/spot6.jpg">
+                    <i class="fa-solid fa-circle-play" style="color: #48c007;"></i>
+                    <p class="mov">Thug Life (Original Motion Picture Soundtrack)</p>
+                    <p class="art">A.R.Rahman</p>
+                </div>
+
+            </div>
+            <div class="ttopic2">
+                <p class="topic2">Made For You</p>
+            </div>
+            <div class="spoc3">
+
+                <div class="spob2">
+                    <img class="r1" src="pimg.html/spoti7.jpg">
+                    <i class="fa-solid fa-circle-play" style="color: #48c007;"></i>
+
+                    <p class="art3">A.R.Rahman,<br>yuvan shankar raja,<br>GV prakash...</p>
+                </div>
+                <div class="spob2">
+                    <img class="r1" src="pimg.html/spoti2.jpg">
+                    <i class="fa-solid fa-circle-play" style="color: #48c007;"></i>
+                    <p class="art3">Anirudh Ravichandran,<br>Karthik,A.R.Rahman...</p>
+                </div>
+                <div class="spob2">
+                    <img class="r1" src="pimg.html/spoti3.jpg">
+                    <i class="fa-solid fa-circle-play" style="color: #48c007;"></i>
+                    <p class="art3">santhosh narayanan,Hip hop Tamizha, GV prakash...</p>
+                </div>
+                <div class="spob2">
+                    <img class="r1" src="pimg.html/spoti4.jpg">
+                    <i class="fa-solid fa-circle-play" style="color: #48c007;"></i>
+                    <p class="art3">Anirudh Ravichandran,<br>Karthik,DSP...</p>
+                </div>
+                <div class="spob2">
+                    <img class="r1" src="pimg.html/spoti5.jpg">
+                    <i class="fa-solid fa-circle-play" style="color: #48c007;"></i>
+                    <p class="art3">A.R.Rahman,<br>santhosh narayanan,<br>Harris Jayaraj...</p>
+                </div>
+                <div class="spob2">
+                    <img class="r1" src="pimg.html/spoti6.jpg">
+                    <i class="fa-solid fa-circle-play" style="color: #48c007;"></i>
+                    <p class="art3">Hip hop Tamizha,<br>A.R.Rahman,<br>santhosh narayanan...</p>
+                </div>
+
+            </div>
+            <div class="ttopic3">
+                <P class="topic3">Artists</P>
+            </div>
+            <div class="spoc4">
+                <div class="spob2">
+                    <div class="artimg">
+                        <img class="r2" src="pimg.html/art1.jpg">
+
+                    </div>
+
+
+                    <p class="artrow">Hip hop Tamizha<br>Aadhi</p>
+                    <p class="artist">Artist</p>
+                </div>
+                <div class="spob2">
+                    <div class="artimg">
+                        <img class="r2" src="pimg.html/art2.jpg">
+
+                    </div>
+
+
+                    <p class="artrow">Santhosh Narayanan</p>
+                    <p class="artist">Artist</p>
+                </div>
+                <div class="spob2">
+                    <div class="artimg">
+                        <img class="r2" src="pimg.html/art3.jpg">
+                    </div>
+
+
+                    <p class="artrow">Sean Roldan</p>
+                    <p class="artist">Artist</p>
+                </div>
+                <div class="spob2">
+                    <div class="artimg">
+                        <img class="r2" src="pimg.html/art4.jpg">
+                    </div>
+
+
+                    <p class="artrow">A.R.Rahman</p>
+                    <p class="artist">Artist</p>
+                </div>
+                <div class="spob2">
+                    <div class="artimg">
+                        <img class="r2" src="pimg.html/art5.jpg">
+                    </div>
+
+
+                    <p class="artrow">yuvan shankar raja</p>
+                    <p class="artist">Artist</p>
+                </div>
+                <div class="spob2">
+                    <div class="artimg">
+                        <img class="r2" src="pimg.html/art7.jpg">
+                    </div>
+
+
+                    <p class="artrow">Anirudh Ravichandran</p>
+                    <p class="artist">Artist</p>
+                </div>
+
+            </div>
+
+
+        </div>
+    </div>
+
+
+
+</body>
+
+</html>
